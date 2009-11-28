@@ -11,44 +11,36 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
     <script src="/javascripts/application.js"></script>
 </head>
-<body>
+<body id="index">
     <div id="wrapper">
         <div id="navigation">
             <div class="container_12">
                 <div class="grid_12">
-                    <a id="branding" href="/">
-                        <img src="/images/dwarfmondo_logo_sm.png" alt="DwarfMondo" class="float_left" />
-                    </a>
                     <ul>
                         <li>
-                            <a href="/">Home</a>
-                        </li>
-                        <li>
-                            <a href="/about">About</a>
+                            <a href="http://dwarfmondo.wufoo.com/forms/dwarfmondo-a-contact-us/">Contact Us</a>
                         </li>
                     </ul>
-                    <div class="clear"></div>
                 </div>
                 <div class="clear"></div>
             </div>
         </div>
-        <div id="main">
-            <div class="container_12">
-    	        <%= yield %>
-    	    </div>
-    	</div>
+    	<%= yield %>
     </div>
     <div id="footer">
         <div class="container_12">
             <div class="grid_4">
         		&copy; <%= Time.now.strftime('%Y') %> DwarfMondo
         	</div>
-        	<div class="grid_8 align_right">
+        	<div class="grid_4 align_center">
             	<a href="mailto:dwarfmondo@gmail.com">dwarfmondo@gmail.com</a>
-            	&middot;
+            	<span class="middot">&middot;</span>
             	<a href="http://twitter.com/dwarfmondo">@dwarfmondo</a>
-            	&middot;
+            	<span class="middot">&middot;</span>
             	<a href="http://twitter.com/cmv">@cmv</a>
+        	</div>
+        	<div class="grid_4 align_right">
+        		<a href="http://flickr.com/photos/hufse/257753107/" target="_blank">photo credits</a>
         	</div>
         	<div class="clear"></div>
     	</div>

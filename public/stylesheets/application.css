@@ -1,36 +1,93 @@
+/* `HTML Elements
+-----------------------------------------------------------
+*/
+
 body {
-	color: #fff;
-	font: 15px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #efefef;
+	font: 15px/1.5 'Lucida Grande', Arial, sans-serif;
 }
 
 a {
-	color: #fff;
-	text-decoration: none;
+  color: #eee;
+  text-decoration: underline;
 }
 
 a:hover {
-	text-decoration: underline;
+  color: #fff;
 }
+
+/* `Layout
+-----------------------------------------------------------
+*/
 
 html,
 body,
 #wrapper,
 #backdrop {
-	background: #222;
+	background: #333;
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
 }
 
-#wrapper {
+#index #wrapper {
 	position: relative;
 }
 
+#index #navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: #000;
+	opacity: 0.40;
+	filter: alpha(opacity = 40);
+}
+
+#navigation {
+  background-color: #111;
+	padding: 7px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #fff;
+  -webkit-box-shadow: 7px 0 7px #000;
+}
+
+#navigation .container_12 {
+  margin: 0 auto;
+}
+
+#navigation ul {
+  float: right;
+  margin: 0;
+}
+
+#navigation ul li {
+  float: left;
+  margin: 0 0 0 20px;
+  list-style: none;
+}
+
+#navigation ul li a {
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+#navigation ul li:first-child {
+  margin-left: 0;
+}
+
+#navigation ul li a:hover {
+  text-decoration: underline;
+}
+
 #backdrop {
-	border-top: 5px solid #111;
+	border-top: 1px solid #fff;
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 1;
 }
 
 #logo {
@@ -41,21 +98,44 @@ body,
 	left: 50%;
 	width: 580px;
 	height: 113px;
+	z-index: 3;
 }
 
-#footer {
+#index #footer {
 	background: #000;
 	border-top: 1px solid #666;
 	line-height: 40px;
-	opacity: 0.50;
-	filter: alpha(opacity = 50);
+	opacity: 0.30;
+	filter: alpha(opacity = 30);
 	position: relative;
 	margin: -41px 0 0;
-	padding: 0 20px;
+	padding: 0;
 	height: 40px;
-	text-align: center;
 	z-index: 1;
+  font-size: 12px;
+  width: 100%;
 }
+
+#index #footer a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#index #footer a:hover {
+	text-decoration: underline;
+}
+
+#index #footer .container_12 {
+  margin: 0 auto;
+}
+
+#branding {
+  margin: 3px 0;
+}
+
+/* `Utility
+-----------------------------------------------------------
+*/
 
 .float_left {
 	float: left;
@@ -63,4 +143,39 @@ body,
 
 .float_right {
 	float: right;
+}
+
+.align_center {
+  text-align: center;
+}
+
+.align_right {
+  text-align: right;
+}
+
+.serif_big {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.text_small {
+  font-size: 12px;
+}
+
+hr.dotted {
+  border-top-style: dotted;
+}
+
+.middot {
+  color: #f00;
+  font-weight: bold;
+}
+
+.normalize {
+  margin-bottom: 10px;
+}
+
+.minimize {
+  margin-bottom: 5px;
 }
